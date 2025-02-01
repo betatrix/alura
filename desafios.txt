@@ -1,0 +1,76 @@
+// Crie uma função que calcule o índice de massa corporal (IMC) de uma pessoa, a partir de sua altura, em metros, e peso, em quilogramas, que serão recebidos como parâmetro.
+function calcularIMC(altura, peso) {
+    const imc = parseFloat(peso/(altura*altura)).toFixed(3);
+
+    return imc;
+}
+
+// Crie uma função que calcule o valor do fatorial de um número passado como parâmetro.
+function fatorialNumero(numero) {
+    let fatorial = 1;
+
+    for (let i = 1; i <= numero; i++) {
+        fatorial *= i;
+    }
+
+    return fatorial;
+}
+
+// Crie uma função que converte um valor em dólar, passado como parâmetro, e retorna o valor equivalente em reais. Para isso, considere a cotação do dólar igual a R$4,80. 
+function convertRealToDollar(value){
+    convertedValue = parseFloat(value/4.80).toFixed(2);
+    
+    return convertedValue;
+}
+
+// Crie uma função que mostre na tela a área e o perímetro de uma sala retangular, utilizando altura e largura que serão dadas como parâmetro.
+function calcularAreaPerimetroRetangulo(altura, largura) {
+    const area = altura*largura;
+    const perimetro = 2*(altura+largura);
+
+    console.log(`Área: ${area}, Perímetro: ${perimetro}`);
+}
+
+// Crie uma função que mostre na tela a área e o perímetro de uma sala circular, utilizando seu raio que será fornecido como parâmetro. Considere Pi = 3,14.
+function calcularAreaPerimetroCirculo(raio) {
+    const perimetro = 2*3.14*raio;
+    const area = Math.pow(perimetro, 2);
+
+    console.log(`Área: ${area.toFixed(2)}, Perímetro: ${perimetro.toFixed(2)}`);
+}
+
+// Crie uma função que mostre na tela a tabuada de um número dado como parâmetro.
+function calcularTabuada(numero) {
+    for(let i = 0; i <= 10; i++) {
+        console.log(`${numero}X${i} = ${numero*i}`);
+    }
+}
+
+
+console.log(calcularIMC(1.67, 73))
+console.log(fatorialNumero(5));
+console.log(convertRealToDollar(5.50));
+calcularAreaPerimetroRetangulo(10, 5);
+calcularAreaPerimetroCirculo(10);
+calcularTabuada(9);
+
+
+// Crie uma lista vazia, com o nome listaGenerica.
+var listaGenerica = [];
+
+// Crie uma lista de linguagens de programação chamada linguagensDeProgramacao com os seguintes elementos: 'JavaScript','C','C++', 'Kotlin' e 'Python'.
+var linguagensDeProgramacao = ['JavaScript','C','C++', 'Kotlin', 'Python'];
+
+// Adicione à lista linguagensDeProgramacao os seguintes elementos: 'Java', 'Ruby' e 'GoLang'.
+linguagensDeProgramacao.push('Java', 'Ruby', 'GoLang');
+
+// Crie uma lista com 3 nomes e exiba no console apenas o primeiro elemento.
+var listaNomes = ['Gabriel', 'Beatriz', 'Kenzo'];
+console.log(listaNomes[0]);
+
+// Crie uma lista com 3 nomes e exiba no console apenas o segundo elemento.
+console.log(listaNomes[1]);
+
+// Crie uma lista com 3 nomes e exiba no console apenas o último elemento.
+console.log(listaNomes[2]);
+console.log(listaNomes[listaNomes.length - 1]);
